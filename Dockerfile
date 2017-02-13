@@ -9,5 +9,7 @@ RUN echo "deb http://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.
 RUN apt-get update
 RUN apt-get install -y yarn
 
-# Install ember-cli and bower
-RUN yarn global add ember-cli bower
+# Install awscli
+RUN apt-get install -y python-dev python-pip
+
+RUN pip install awscli
